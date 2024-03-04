@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SciFi Inkie Stories</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>SciFi Inkie Stories</h1>
+    <nav>
+      <a href="#about">About Me</a>
+      <a href="#latest-issue">Latest Issue</a>
+      <a href="#featured-comments">Featured Comments</a>
+      <a href="#support-me">Support Us</a>
+    </nav>
+  </header>
+
+  <div class="welcome-section" id="welcome-section">
+    <h1>Welcome to Sci-Fi Inkie Stories</h1>
+    <p>Your gateway to captivating sci-fi adventures.</p>
+    <button onclick="hideWelcomeSection()">Learn More</button>
+  </div>
+
+  <main>
+    <section class="landing-page about" id="about">
+      <h2>About Me</h2>
+      <div class="about-me-content">
+        <img src="mystery.jpg" alt="About Me Photo">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis mauris eu massa varius,
+          ac tincidunt nunc fringilla. Integer nec tristique neque. Fusce ut justo quis mauris auctor sagittis.
+        </p>
+        <p>
+          Proin feugiat risus non semper fringilla. Sed posuere vehicula lorem, eu pharetra libero consequat ut.
+          Aliquam fringilla volutpat urna id bibendum. Fusce feugiat ullamcorper metus, vel tincidunt purus volutpat sit amet.
+        </p>
+        <!-- Add more content here -->
+      </div>
+    </section>
+
+    <section class="landing-page latest-issue" id="latest-issue">
+      <h2>Latest Issue</h2>
+      <div class="latest-issue-content">
+        <h3>Chapter 1: The Beginning</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis mauris eu massa varius,
+          ac tincidunt nunc fringilla. Integer nec tristique neque. Fusce ut justo quis mauris auctor sagittis.
+        </p>
+        <h3>Chapter 2: The Adventure Continues</h3>
+        <p>
+          Proin feugiat risus non semper fringilla. Sed posuere vehicula lorem, eu pharetra libero consequat ut.
+          Aliquam fringilla volutpat urna id bibendum. Fusce feugiat ullamcorper metus, vel tincidunt purus volutpat sit amet.
+        </p>
+        <!-- Add more chapters/content here -->
+      </div>
+    </section>
+
+    <section class="landing-page featured-comments" id="featured-comments">
+      <h2>Featured Comments</h2>
+      <div class="comments">
+        <div class="comment">
+          <h3>User123:</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</p>
+          <p><strong>Response:</strong> Sed posuere vehicula lorem, eu pharetra libero consequat ut.</p>
+        </div>
+        <!-- Add more comments and responses here -->
+      </div>
+    </section>
+
+    <section class="landing-page support-me" id="support-me">
+      <h2>Support Us</h2>
+      <p>
+        If you enjoy Sci-Fi Inkie Stories and wish to help us continue our mission, consider contributing. Your support allows us to keep bringing you captivating sci-fi adventures.
+      </p>
+      <button>Support on Patreon</button>
+      <button>Follow on Instagram</button>
+      <button>Like us on Facebook</button>
+    </section>
+
+    <!-- Mobile-only section -->
+    <section class="landing-page mobile-only" id="mobile-only">
+      <h2>Mobile-only Section</h2>
+      <p>This section is only visible on mobile devices.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Sci-Fi Inkie Stories</p>
+  </footer>
+
+  <!-- Mascot Image -->
+  <img src="maxi.png" alt="Mascot" id="mascot">
+
+  <!-- Add hover effect to mascot -->
+  <script>
+    const mascot = document.getElementById('mascot');
+    mascot.addEventListener('mouseover', () => {
+      // Display welcome message or call to action
+      alert('Welcome to Sci-Fi Inkie Stories!');
+    });
+  </script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
