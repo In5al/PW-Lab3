@@ -97,6 +97,9 @@ button:hover {
     max-width: 100%; /* Ensure image responsiveness */
   }
 
+  .header {
+    align-items: flex-start;
+  }
   /* Ensure buttons stack vertically */
   button {
     display: block;
@@ -119,7 +122,9 @@ button:hover {
   }
 
   nav {
-    display: none; /* Hide navigation links by default on small screens */
+    display: grid;
+   
+    /*display: none; /* Hide navigation links by default on small screens */
   }
 
   /* Display navigation links when menu is open */
