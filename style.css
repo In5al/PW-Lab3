@@ -1,16 +1,16 @@
 /* Global styles */
 body {
-  font-family: 'Roboto', sans-serif; /* Updated font family to a futuristic one */
+  font-family: 'Roboto', sans-serif;
   line-height: 1.6;
-  color: #333; /* Dark gray text color */
+  color: #333;
   margin: 0;
   padding: 0;
-  background-color: #cfd8dc; /* Light blue-gray background color */
+  background-color: #e0e0e0; /* Light gray background */
 }
 
 /* Header styles */
 header {
-  background-color: #607d8b; /* Dark blue close to grey */
+  background-color: #78909c; /* Dark blue close to gray */
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
@@ -18,19 +18,20 @@ header {
 }
 
 header h1 {
-  color: #fff; /* White text color */
-  font-family: 'Segoe Script', sans-serif; /* Calligraphic font family */
+  color: #fff;
+  font-family: 'Neon Club Music', sans-serif; /* Futuristic font */
+  font-size: 28px;
 }
 
 nav a {
-  color: #fff; /* White text color */
+  color: #fff;
   text-decoration: none;
   padding: 10px 15px;
   font-weight: bold;
 }
 
 nav a:hover {
-  background-color: #455a64; /* Darker shade on hover */
+  background-color: #607d8b; /* Darker blue on hover */
 }
 
 /* Mascot styles */
@@ -38,25 +39,31 @@ nav a:hover {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 100px; /* Adjust size as needed */
-  height: auto; /* Adjust size as needed */
-  animation: walk 6s infinite alternate, jump 3s infinite; /* Mascot animations */
+  width: 100px;
+  height: auto;
+  animation: walk 6s infinite alternate, jump 3s infinite;
 }
 
 /* About Me section styles */
 .about-image {
-  max-width: 100%; /* Ensure image responsiveness */
+  max-width: 100%;
+}
+
+.about h2 {
+  font-size: 24px; /* Larger font size */
+  font-weight: bold; /* Bold font weight */
 }
 
 /* Lively colors for sections */
 .about, .latest-issue, .featured-comments, .support-me {
-  background-color: #cfd8dc; /* Light blue-gray background color */
+  background-color: #f5f5f5; /* Lighter gray background */
+  padding: 20px; /* Added padding */
 }
 
 /* Button styles */
 button {
-  background-color: #607d8b; /* Dark blue close to grey */
-  color: #fff; /* White text color */
+  background-color: #607d8b;
+  color: #fff;
   padding: 10px 20px;
   border-radius: 5px;
   border: none;
@@ -65,18 +72,33 @@ button {
 }
 
 button:hover {
-  background-color: #455a64; /* Darker shade on hover */
+  background-color: #455a64;
 }
 
 /* Mobile-specific styles */
 @media (max-width: 768px) {
   .about-image {
-    max-width: 50%; /* Adjust image size on mobile */
+    max-width: 100%; /* Ensure image responsiveness */
   }
 
-  /* Hide mobile-only section on larger screens */
+  /* Ensure buttons stack vertically */
+  button {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  /* Ensure right border is respected */
+  .about, .latest-issue, .featured-comments, .support-me {
+    padding-right: 20px;
+  }
+
+  /* Fix mobile-only section */
   .mobile-only {
     display: none;
+  }
+
+  .call-to-action-mobile {
+    display: block;
   }
 }
 
@@ -100,30 +122,4 @@ button:hover {
   50% {
     transform: translateY(-20px);
   }
-}
-
-/* Welcome animation */
-.welcome-section {
-  animation: fade-in 2s ease-in-out; /* Fade-in animation */
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-/* Font styling */
-h1, h2, h3 {
-  font-family: 'Segoe Script', sans-serif; /* Calligraphic font family */
-  color: #333; /* Dark gray text color */
-}
-
-p {
-  font-family: 'Segoe Script', sans-serif; /* Calligraphic font family */
-  color: #666; /* Light gray text color */
-  font-size: 1.1rem;
 }
