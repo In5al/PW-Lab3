@@ -2,15 +2,15 @@
 body {
   font-family: 'Roboto', sans-serif; /* Updated font family to a futuristic one */
   line-height: 1.6;
-  color: #ccc; /* Updated color to a colder tone */
+  color: #333; /* Dark gray text color */
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5; /* Lighter background color */
+  background-color: #cfd8dc; /* Light blue-gray background color */
 }
 
 /* Header styles */
 header {
-  background-color: #37474f; /* Dark blue close to grey */
+  background-color: #607d8b; /* Dark blue close to grey */
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
@@ -18,18 +18,19 @@ header {
 }
 
 header h1 {
-  color: #ccc; /* Updated color to a colder tone */
+  color: #fff; /* White text color */
+  font-family: 'Segoe Script', sans-serif; /* Calligraphic font family */
 }
 
 nav a {
-  color: #ccc; /* Updated color to a colder tone */
+  color: #fff; /* White text color */
   text-decoration: none;
   padding: 10px 15px;
   font-weight: bold;
 }
 
 nav a:hover {
-  background-color: #263238; /* Darker shade on hover */
+  background-color: #455a64; /* Darker shade on hover */
 }
 
 /* Mascot styles */
@@ -48,20 +49,8 @@ nav a:hover {
 }
 
 /* Lively colors for sections */
-.about {
-  background-color: #cfd8dc; /* Light blue-gray */
-}
-
-.latest-issue {
-  background-color: #b0bec5; /* Pale blue-gray */
-}
-
-.featured-comments {
-  background-color: #90a4ae; /* Lighter blue-gray */
-}
-
-.support-me {
-  background-color: #78909c; /* Darkest blue-gray */
+.about, .latest-issue, .featured-comments, .support-me {
+  background-color: #cfd8dc; /* Light blue-gray background color */
 }
 
 /* Button styles */
@@ -129,12 +118,12 @@ button:hover {
 
 /* Font styling */
 h1, h2, h3 {
-  font-family: 'Roboto', sans-serif; /* Updated font family to a futuristic one */
+  font-family: 'Segoe Script', sans-serif; /* Calligraphic font family */
   color: #333; /* Dark gray text color */
 }
 
 p {
-  font-family: 'Roboto', sans-serif; /* Updated font family to a futuristic one */
+  font-family: 'Segoe Script', sans-serif; /* Calligraphic font family */
   color: #666; /* Light gray text color */
   font-size: 1.1rem;
 }
