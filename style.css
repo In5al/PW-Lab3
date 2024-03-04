@@ -1,3 +1,4 @@
+
 /* Global styles */
 body {
   font-family: 'Roboto', sans-serif;
@@ -21,6 +22,10 @@ header h1 {
   color: #fff;
   font-family: 'Neon Club Music', sans-serif; /* Futuristic font */
   font-size: 28px;
+}
+
+nav {
+  display: flex; /* Ensure navigation links are displayed as flex items */
 }
 
 nav a {
@@ -48,7 +53,7 @@ nav a:hover {
 .about-image {
   width: 100%;
   height: auto;
- display: block;
+  display: block;
 }
 
 .about h2 {
@@ -77,6 +82,7 @@ button:hover {
   background-color: #455a64;
 }
 
+.mobile-only{display: none;}
 /* Mobile-specific styles */
 @media (max-width: 768px) {
   .about-image {
@@ -94,15 +100,36 @@ button:hover {
     padding-right: 20px;
   }
 
-  /* Fix mobile-only section */
+  /* Hide mobile-only section on small screens */
   .mobile-only {
-    display: none;
+    display: block;
   }
+
+  /* Show hamburger menu on small screens */
+  .hamburger {
+    display: block;
+  }
+
+  nav {
+    display: none; /* Hide navigation links by default on small screens */
+  }
+
+  /* Display navigation links when menu is open */
+  .menu-open nav {
+    display: flex;
+    flex-direction: column; /* Stack navigation links vertically */
+  }
+
+  nav a {
+    padding: 10px; /* Adjust padding for navigation links */
+    border-bottom: 1px solid #fff; /* Add border between navigation links */
+  }
+}
 
   .call-to-action-mobile {
     display: block;
   }
-}
+
 
 /* Mascot animations */
 @keyframes walk {
