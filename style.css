@@ -48,6 +48,14 @@ nav a:hover {
   height: auto;
   animation: walk 6s infinite alternate, jump 3s infinite;
 }
+.about-me-content {
+  width: 100%;
+}
+
+.about-me-content img {
+  width: 100%;
+  height: auto;
+}
 
 /* About Me section styles */
 .about-image {
