@@ -1,110 +1,121 @@
 /* Global styles */
 body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8; /* Soft gray background */
+  font-family: 'Arial', sans-serif; /* Updated font family */
+  line-height: 1.6;
+  color: #333; /* Updated color */
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0; /* Calming background color */
+}
+
+/* Header styles */
+header {
+  background-color: #007bff; /* Updated color */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  color: #fff; /* Updated color */
+}
+
+nav a {
+  color: #fff; /* Updated color */
+  text-decoration: none;
+  padding: 10px 15px;
+  font-weight: bold;
+}
+
+/* Mascot styles */
+#mascot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 100px; /* Adjust size as needed */
+  height: auto; /* Adjust size as needed */
+  animation: walk 6s infinite alternate, jump 3s infinite; /* Mascot animations */
+}
+
+/* About Me section styles */
+.about-image {
+  max-width: 100%; /* Ensure image responsiveness */
+}
+
+/* Lively colors for sections */
+.about {
+  background-color: #add8e6; /* Light blue color for calmness */
+}
+
+.latest-issue {
+  background-color: #afeeee; /* Pale turquoise color for calming effect */
+}
+
+.featured-comments {
+  background-color: #ffebcd; /* Blanched almond color for diplomacy */
+}
+
+.support-me {
+  background-color: #f0e68c; /* Khaki color for warmth and friendliness */
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .about-image {
+    max-width: 50%; /* Adjust image size on mobile */
   }
-  
-  /* Header styles */
-  header {
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
-  }
-  
-  nav {
-    display: flex;
-  }
-  
-  nav a {
-    padding: 10px 15px;
-    text-decoration: none;
-  }
-  
-  /* Mobile Styles */
-  @media (max-width: 768px) {
-    header {
-      padding: 10px;
-    }
-  
-    nav {
-      flex-direction: column;
-    }
-  
-    nav a {
-      padding: 10px 0;
-    }
-  
-    .landing-page {
-      padding: 10px;
-    }
-  
-    h2 {
-      font-size: 1.5rem;
-    }
-  
-    p {
-      font-size: 1rem;
-    }
-  
-    button {
-      padding: 10px 20px;
-      margin: 10px;
-    }
-  
-    /* Adjust button styles for better visibility on mobile */
-    button {
-      padding: 10px 20px;
-      margin: 10px;
-    }
-  }
-  
-  /* Tablet and Desktop Styles */
-  @media (min-width: 768px) {
-    .landing-page {
-      padding: 20px;
-    }
-  
-    h2 {
-      font-size: 2rem;
-    }
-  
-    p {
-      font-size: 1.1rem;
-    }
-  
-    button {
-      padding: 10px 20px;
-      margin: 10px;
-    }
-  }
-  
-  /* Styles for mobile-only section */
+
+  /* Hide mobile-only section on larger screens */
   .mobile-only {
     display: none;
   }
-  
-  /* Show mobile-only section on mobile devices */
-  @media (max-width: 768px) {
-    .mobile-only {
-      display: block;
-      padding: 20px;
-    }
+}
+
+/* Mascot animations */
+@keyframes walk {
+  0% {
+    transform: translateX(0);
   }
-  
-  /* Styles for mascot */
-  #mascot {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 100px; /* Adjust size as needed */
-    height: auto; /* Adjust size as needed */
-    cursor: pointer;
+  50% {
+    transform: translateX(50px);
   }
-  
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Welcome animation */
+.welcome-section {
+  animation: fade-in 2s ease-in-out; /* Fade-in animation */
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Font styling */
+h1, h2, h3 {
+  font-family: 'Arial', sans-serif; /* Updated font family */
+  color: #333; /* Updated color */
+}
+
+p {
+  font-family: 'Arial', sans-serif; /* Updated font family */
+  color: #666; /* Updated color */
+  font-size: 1.1rem;
+}

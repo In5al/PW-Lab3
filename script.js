@@ -1,36 +1,38 @@
-function scrollToSection(sectionId) {
-  document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-}
+document.addEventListener("DOMContentLoaded", function() {
+  const mascot = document.getElementById('mascot');
+  
+  // Delayed appearance of mascot
+  setTimeout(function() {
+    mascot.style.display = 'block';
+  }, 5000); // Adjust delay time as needed
+  
+  // Animation functions for mascot
+  function rotateMascot() {
+    mascot.style.transform = 'rotate(360deg)';
+  }
 
-function hideWelcomeSection() {
-  document.getElementById('welcome-section').classList.add('hidden');
-}
+  function tiltMascot() {
+    mascot.style.transform = 'rotate(-15deg)';
+  }
 
-// Mascot Animation
-const mascot = document.getElementById('mascot');
-mascot.style.transition = 'transform 0.5s ease';
+  function jumpMascot() {
+    mascot.style.transform = 'translateY(-20px)';
+  }
 
-function rotateMascot() {
-  mascot.style.transform = 'rotate(360deg)';
-}
+  function walkMascot() {
+    mascot.style.transform = 'translateX(20px)';
+  }
 
-function tiltMascot() {
-  mascot.style.transform = 'rotate(-15deg)';
-}
+  // Apply animation on mouseover
+  mascot.addEventListener('mouseover', function() {
+    rotateMascot();
+    tiltMascot();
+    jumpMascot();
+    walkMascot();
+  });
 
-function jumpMascot() {
-  mascot.style.transform = 'translateY(-20px)';
-}
-
-function walkMascot() {
-  mascot.style.transform = 'translateX(20px)';
-}
-
-// Hover Effect
-mascot.addEventListener('mouseover', () => {
-  mascot.style.transform = 'scale(1.2)';
-});
-
-mascot.addEventListener('mouseout', () => {
-  mascot.style.transform = 'scale(1)';
+  // Display welcome message on mouseover
+  mascot.addEventListener('mouseover', function() {
+    alert('Welcome to Sci-Fi Inkie Stories!');
+  });
 });
