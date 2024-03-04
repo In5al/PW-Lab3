@@ -27,7 +27,7 @@ nav a {
   color: #fff;
   text-decoration: none;
   padding: 10px 15px;
-  font-size: calc(1em - 0.2vw); /* Adjust font size based on viewport width */
+  font-weight: bold;
 }
 
 nav a:hover {
@@ -46,8 +46,9 @@ nav a:hover {
 
 /* About Me section styles */
 .about-image {
-  max-width: 70%; /* Adjust based on image size */
+  width: 100%;
   height: auto;
+ display: block;
 }
 
 .about h2 {
@@ -70,7 +71,6 @@ button {
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-size: calc(1em - 0.2vw); /* Adjust font size based on viewport width */
 }
 
 button:hover {
@@ -79,40 +79,49 @@ button:hover {
 
 /* Mobile-specific styles */
 @media (max-width: 768px) {
-  /* Ensure sections stack vertically */
-  .landing-page {
-    padding: 20px;
+  .about-image {
+    max-width: 100%; /* Ensure image responsiveness */
   }
 
-  /* Ensure image responsiveness in about section */
-  .about-image {
-    max-width: 70%; /* Adjust based on image size */
-    height: auto;
-    }
-  
-    /* Ensure mobile-only section displays correctly */
-    .mobile-only {
-      display: block; /* Show on mobile devices */
-    }
-  
-    nav {
-      margin-top: 10px; /* Add space between header and navigation */
-    }
-  
-    /* Media query to detect window size change (portrait) */
-    @media (max-width: 768px) and (orientation: portrait) {
-      /* Changes applied only in portrait mode */
-      .about-image {
-        max-width: 80%; /* Reduce image size further in portrait */
-      }
-    }
-  
-    /* Media query to detect window size change (landscape) */
-    @media (max-width: 768px) and (orientation: landscape) {
-      /* Changes applied only in landscape mode */
-      .about-image {
-        max-width: 60%; /* Reduce image size further in landscape */
-      }
-    }
+  /* Ensure buttons stack vertically */
+  button {
+    display: block;
+    margin-bottom: 10px;
   }
-   
+
+  /* Ensure right border is respected */
+  .about, .latest-issue, .featured-comments, .support-me {
+    padding-right: 20px;
+  }
+
+  /* Fix mobile-only section */
+  .mobile-only {
+    display: none;
+  }
+
+  .call-to-action-mobile {
+    display: block;
+  }
+}
+
+/* Mascot animations */
+@keyframes walk {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
